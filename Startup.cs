@@ -7,7 +7,7 @@ using MVC_EF_Start.DataAccess;
 // https://stackoverflow.com/a/58072137/1385857
 using Microsoft.Extensions.Hosting;
 
-namespace MVC_EF_Start
+namespace Travel_Site
 {
     public class Startup
     {
@@ -22,17 +22,17 @@ namespace MVC_EF_Start
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            // Setup EF connection
+            // Setup TRAVEL DATABASE  connection
             // https://stackoverflow.com/a/43098152/1385857
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:IEXTrading:ConnectionString"]));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:TravelSiteAzure:ConnectionString"]));
 
-            // added from MVC template
+            // added from TRAVEL template
             //services.AddMvc();
             // https://stackoverflow.com/a/58772555/1385857
             services.AddMvc(option => option.EnableEndpointRouting = false);
         }
 
-        // this is the version from the MVC template
+        // this is the version from the TRAVEL template
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             //This ensures that the database and tables are created as per the Models.
