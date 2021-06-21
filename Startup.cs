@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MVC_EF_Start.DataAccess;
+using Travel_Site.DataAccess;
 // https://stackoverflow.com/a/58072137/1385857
 using Microsoft.Extensions.Hosting;
 

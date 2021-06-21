@@ -1,0 +1,7 @@
+
+namespace Travel_Site.Models
+{
+public class App_Models
+{
+	}
+}
